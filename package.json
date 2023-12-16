@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "init-project:unit-tests": "npm i -D @as-pect/cli && asp --init",
+    "init-project:unit-tests": "",
     "test:module": "node tests",
     "test:unit": "asp --verbose",
     "test:unit:ci": "asp --summary",
