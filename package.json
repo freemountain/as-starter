@@ -1,0 +1,29 @@
+{
+  "name": "as-starter",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test:module": "node tests",
+    "test:unit": "asp --verbose ",
+    "test:unit:ci": "asp --summary",
+    "asbuild:debug": "asc assembly/index.ts --target debug",
+    "asbuild:release": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
+    "start": "npx serve .",
+    "dev": "npm run asbuild:debug && node tests/index.js"
+  },
+  "devDependencies": {
+    "@as-pect/cli": "^8.1.0",
+    "assemblyscript": "^0.27.22"
+  },
+  "keywords": [],
+  "description": "",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  },
+  "dependencies": {}
+}

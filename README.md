@@ -1,2 +1,0 @@
-# as-starter
-AssemblyScript Starter
